@@ -1,0 +1,8 @@
+# Python libraries baked into the runtime image so the agent can generate
+# files on request (charts, images, data, PDFs). Installed into /opt/venv.
+# All ship manylinux wheels, so no compiler is needed at build time.
+numpy
+pandas
+matplotlib
+Pillow
+reportlab

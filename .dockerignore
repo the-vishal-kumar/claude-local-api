@@ -1,0 +1,22 @@
+# Keep the build context tiny: only go.mod and src/ are needed to build.
+.git
+.gitignore
+
+# Build / test artifacts
+bin/
+*.out
+*.test
+coverage.*
+
+# Local secrets and runtime mounts
+.env
+workspace/
+
+# Docs and container metadata (not needed inside the build)
+README.md
+LICENSE
+Makefile
+Dockerfile
+docker-compose.yml
+.dockerignore
+.env.example

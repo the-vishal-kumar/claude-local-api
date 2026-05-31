@@ -1,0 +1,4 @@
+# This directory is the default bind-mount target for the Docker setup
+# (mounted to /workspace inside the container; see docker-compose.yml).
+# Put the repository you want Claude to work on here. Its contents are
+# git-ignored; this placeholder just keeps the directory in the repo.

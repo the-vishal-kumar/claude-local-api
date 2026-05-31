@@ -1,0 +1,49 @@
+# docker-compose for claude-local-api.
+#
+# First-time setup (log the CLI in to your Claude subscription once):
+#
+#   docker compose build
+#   docker compose run --rm -it claude-local-api claude        # then type /login
+#
+# The login is saved in the `claude-home` volume and reused on every run.
+# After that:
+#
+#   docker compose up -d
+#   curl -s localhost:8787/healthz
+#
+services:
+  claude-local-api:
+    build: .
+    image: claude-local-api:latest
+    container_name: claude-local-api
+    ports:
+      - "8787:8787"
+    # All settings AND your Claude credential come from .env — copy
+    # .env.example to .env and fill it in. A missing .env is tolerated (the
+    # image's built-in defaults apply, but tasks fail until a credential is set).
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # Docker-structural values tied to the volume mounts below. These
+      # intentionally override .env so the container's internal paths stay
+      # correct; put everything else (permission mode, tools, caps, credential)
+      # in .env.
+      CLAUDE_API_ADDR: ":8787"
+      CLAUDE_DEFAULT_CWD: "/workspace"
+      CLAUDE_WORKSPACE_ROOT: "/runs"
+    volumes:
+      # Persist the Claude Code login (~/.claude, ~/.claude.json, ...) so you
+      # only have to run /login once.
+      - claude-home:/home/appuser
+      # Ephemeral per-request workspaces (container-internal, never the host).
+      - claude-runs:/runs
+      # The repository the agent reads and edits in the legacy in-place path.
+      # On Linux this host dir must be writable by uid 10001 (the container's
+      # user): `chown -R 10001 ./workspace`. Docker Desktop handles it for you.
+      - ./workspace:/workspace
+    restart: unless-stopped
+
+volumes:
+  claude-home:
+  claude-runs:

@@ -1,0 +1,47 @@
+Educational Use License
+
+Copyright (c) 2026 Vishal Kumar. All rights reserved.
+
+This software and its accompanying source code (the "Software") are made
+publicly visible for one purpose only: to let individuals read and study the
+code in order to learn from it. This is a source-available license, NOT an
+open-source license.
+
+1. Grant (learning only)
+   Permission is granted, free of charge, to any individual to view, read, and
+   study the source code of the Software for personal, non-commercial,
+   educational purposes. You may make a local copy strictly as needed to read
+   and study it (for example, by cloning the repository to your own machine),
+   and you may build and run that local copy solely to understand how it works
+   as part of that personal study.
+
+2. Restrictions
+   Except as expressly permitted in Section 1, no rights are granted. Without
+   the prior written permission of the copyright holder, you may NOT:
+     a. use, run, deploy, host, or operate the Software, in whole or in part,
+        for any purpose other than personal study;
+     b. copy, publish, mirror, redistribute, or otherwise make the Software (or
+        any part of it) available to any third party;
+     c. modify, adapt, translate, or create derivative works based on the
+        Software, or distribute any such works;
+     d. sublicense, sell, rent, lease, or otherwise commercialize the Software;
+        or
+     e. remove, obscure, or alter this license or any copyright notice.
+
+3. No public-distribution or general-use rights
+   Public distribution and general or production use of the Software are not
+   permitted under this license. All rights not expressly granted above are
+   reserved by the copyright holder.
+
+4. No warranty
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING
+   FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+   IN THE SOFTWARE.
+
+For any permission beyond the scope of this license — including use,
+deployment, distribution, modification, or commercial licensing — contact the
+copyright holder at https://github.com/the-vishal-kumar.

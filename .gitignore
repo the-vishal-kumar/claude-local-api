@@ -1,0 +1,18 @@
+# Build artifacts
+/bin/
+
+# Test and coverage output
+*.out
+*.test
+coverage.*
+
+# Local environment overrides
+.env
+
+# Claude Code per-machine settings (permission allowlist etc.) — never commit.
+# A shared .claude/settings.json may be committed; the .local.json is personal.
+.claude/settings.local.json
+
+# Docker workspace mount (the agent's working copy) — keep the dir, ignore contents
+/workspace/*
+!/workspace/.gitkeep
