@@ -55,7 +55,7 @@ token: env ## One-time: mint a subscription token and save it into .env for you.
 		read tok; \
 		[ -n "$$tok" ] || { echo "No token entered; .env unchanged."; exit 1; }; \
 		tmp=$$(mktemp); grep -v '^CLAUDE_CODE_OAUTH_TOKEN=' .env > "$$tmp" 2>/dev/null || true; mv "$$tmp" .env; \
-		printf 'CLAUDE_CODE_OAUTH_TOKEN=%s\n' "$$tok" >> .env; \
+		printf 'CLAUDE_CODE_OAUTH_TOKEN="%s"\n' "$$tok" >> .env; \
 		echo "Saved CLAUDE_CODE_OAUTH_TOKEN to .env — now run 'make start'."
 
 login: ## Alternative auth: interactive /login, persisted in the claude-home volume.
